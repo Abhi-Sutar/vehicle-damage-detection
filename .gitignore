@@ -1,0 +1,53 @@
+# Private planning notes
+dev-plan.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Datasets (never commit raw data, licences differ per dataset)
+data/raw/
+data/processed/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+
+# Training outputs and weights
+runs/
+wandb/
+*.pt
+*.pth
+*.onnx
+*.engine
+# Keep the one small exported model used by the Docker image, if you decide to commit it
+!models/best.pt
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+roboflow_api_key*
+kaggle.json
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
