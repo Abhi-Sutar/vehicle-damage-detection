@@ -1,0 +1,15 @@
+.git
+.venv
+.vscode
+.idea
+claude-outputs
+dev-plan.md
+data
+runs
+notebooks
+docs
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+*.pt
+!models/best.pt

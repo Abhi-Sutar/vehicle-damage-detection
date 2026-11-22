@@ -19,8 +19,9 @@ dist/
 .ipynb_checkpoints/
 
 # Datasets (never commit raw data, licences differ per dataset)
-data/raw/
-data/processed/
+data/*
+!data/README.md
+!data/data.yaml
 datasets/
 *.zip
 *.tar
