@@ -6,11 +6,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import median
 
-SPLITS = ("train", "valid", "test")
-
-
-def source_name(filename: str) -> str:
-    return filename.split(".rf.")[0]
+from vehicle_damage.data import COCO_SPLITS, source_name
 
 
 def shape(segmentation: object) -> str:
@@ -59,7 +55,7 @@ def main() -> int:
     args = parser.parse_args()
 
     splits_per_source: dict[str, set[str]] = defaultdict(set)
-    for split in SPLITS:
+    for split in COCO_SPLITS:
         summarise(args.root / split, splits_per_source)
 
     distinct = len(splits_per_source)
